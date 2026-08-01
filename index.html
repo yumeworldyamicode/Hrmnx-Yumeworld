@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<!-- This website was collaborately made by multiple members of HRMNX Ent. --><html lang="jp">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="images/japfavicon.png">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.cdnfonts.com/css/nintendo-ds-bios');
+    body {
+      font-family: "DotGothic16", sans-serif;
+      font-size: 1em;
+	    background-image: url('images/bg2.png');
+	    background-repeat: no-repeat;
+      background-size: cover;
+	    background-attachment: fixed;
+      image-rendering: pixelated;
+         }
+  </style>
+  <script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
+  <link href="https://fonts.cdnfonts.com/css/nintendo-ds-bios" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=VT323&display=swap" rel="stylesheet">
+  <title></title>
+  <script>function recursiveAnimateTitle(string, delay) {
+  let firstLetter = string[0];
+  let title = document.querySelector('title');
+  title.innerHTML += firstLetter;
+  if (string.length > 1) {
+    setTimeout(function() {
+      recursiveAnimateTitle(string.substring(1), delay);
+    }, delay);
+  }
+}
+
+function animateTitle(string, initialDelay, restartDelay) {
+  document.querySelector('title').innerHTML = "";
+  recursiveAnimateTitle(string, initialDelay);
+  setTimeout(function() {
+    animateTitle(string, initialDelay, restartDelay);
+  }, initialDelay + string.length * restartDelay);
+}
+
+animateTitle('私の夢世界へようこそ！', 100, 1000);</script>
+  <meta name="google-site-verification" content="DIYodx7-82JFIxuSEbH-U1hzahjbt0YO149rKgjVsKM" />
+  <link rel="alternate" type="application/rss+xml" href="{RSS}">
+  <link rel="stylesheet" href="https://static.tumblr.com/qxrkgx6/RWPmgn2qa/normalize.min.css">
+  <script src="Scripts/ghostCursor.js"></script>
+
+
+</head>
+
+<body onload="new ghostCursor();">
+<div class="layout">
+  <h1 class="visually-hidden">Welcome to my Yumeworld!</h1>
+  <header class="box header" id="box-header">
+    <img src="images/logo_jp.png" class="pop-in-hover" onclick="showLanguagePrompt()" style="cursor: pointer; image-rendering: pixelated; width: 60%; margin-top: -20px;">
+    <div id="languageModal" class="modal-overlay">
+     <div class="modal-box">
+        <p>Are you sure you want to switch the site language to English?<br>サイトの言語を英語に切り替えてもよろしいですか？</p>
+         <div class="modal-buttons">
+         <button class="btn-confirm" onclick="redirectToEnglish()">Switch Language</button>
+         <button class="btn-cancel" onclick="closeLanguagePrompt()">Cancel</button>
+       </div>
+     </div>
+    </div>
+  
+       <script>
+       function showLanguagePrompt() {
+          document.getElementById('languageModal').classList.add('show-modal');
+        }
+  
+       function closeLanguagePrompt() {
+         document.getElementById('languageModal').classList.remove('show-modal');
+        }
+
+       function redirectToEnglish() {
+         window.location.href = "stillworkingonit!.html";
+        }
+       </script>
+  </header>
+
+  <div class="box" id="box-topnav">
+    <nav class="top-nav">
+  
+      <div class="top-nav-item">
+        <a href="https://yaminoyume.atabook.org" target="_blank" class="top-nav-link">来客芳名録</a>
+      </div>
+  
+      <div class="top-nav-item">
+        <a href="changelog.html" target="_blank" class="top-nav-link">変更履歴</a>
+      </div>
+  
+      <div class="top-nav-item">
+        <a href="about.html" target="_blank" class="top-nav-link">何者か？</a>
+      </div>
+
+      <div class="top-nav-item">
+        <a href="#"
+           onclick="document.getElementById('playlistwidget').showModal(); return false;"
+           class="top-nav-link">
+          プレイリストを開く
+        </a>
+      </div>
+
+    <div class="top-nav-item has-dropdown">
+      <span class="top-nav-link">登録 ˅</span>
+      <div class="top-nav-dropdown">
+      	<a href="signupjp.html">サインアップ</a>
+        <a href="signinjp.html">ログイン</a>
+      </div>
+    </div>
+    </nav>
+  </div>
+
+        <div id="container">
+            <div id="headerArea">
+                
+            </div>
+
+            <div id="flex">
+                <main>
+                    <h1>Still working on it!</h1>
+                    <p><strong>Please read this first!</strong></p>
+                    <div class="box">
+                    <p>Hello, we're still working on this site so ignore the mess!</p>
+                    </div>
+                </main>
+            <aside id="rightSidebar" style="margin-left: 0px;">
+<dialog id="playlistwidget" style="width: 500px;">
+    <div class="player-header" style="color: white;">
+    	<div class="box" style="color: black;"><h3 style="color: black;">ストリーミング</h3><p>これらの楽曲はすべて、Team HOSHIZORAのメンバーである<b>千代</b>と<b>愛</b>がプロデュースしました。ぜひお好みのプラットフォームでストリーミング再生して、応援していただけると嬉しいです。<a href="https://linktr.ee/yumeworldyamiost">こちらのリンク</a>から、このプレイリストをアルバムのように再生することができます。</p></div>
+	<h2>プレイリスト</h2>
+        <span class="now-playing-label"><b>再生中の曲：</b></span>
+        <div id="current-track-title" class="track-title"><i>下の曲を選んでください</i></div>
+    </div>
+    <div class="divider"><span>Powered by HOSHIZORA</span></div>
+    <audio id="audio-player" style="display: none !important;" src=""></audio>
+  
+    <ul class="playlist-container" style="padding-left: 0; list-style: none; cursor: pointer; color: white;">
+          <li class="playlist-track active" data-src="audio/STARPOWER.wav">
+              <span class="track-number">1 ·</span> 星の力 ～ STARPOWER
+          </li>
+          <li class="playlist-track active" data-src="audio/JUNGLE RUN.wav">
+              <span class="track-number">2 ·</span> ジャングルラン ⟡ JUNGLE RUN
+          </li>
+          <li class="playlist-track active" data-src="audio/HOW FAR I GO.wav">
+              <span class="track-number">3 ·</span> どこまで行くか ☆ HOW FAR I GO
+          </li>
+          <li class="playlist-track" data-src="audio/CATCH ME.wav">
+              <span class="track-number">4 ·</span> 捕まえて ★ CATCH ME
+          </li>
+          <li class="playlist-track" data-src="audio/LOOKING FOR YOU.wav">
+              <span class="track-number">5 ·</span> あなたを探しています 〜 LOOKING FOR YOU
+          </li>
+          <li class="playlist-track" data-src="audio/REACHING IT.wav">
+              <span class="track-number">6 ·</span> 到達する ★ REACHING IT
+          </li>
+          <li class="playlist-track" data-src="audio/HAPPY DAYS.wav">
+              <span class="track-number">7 ·</span> 幸せな日々 ☆ HAPPY DAYS
+          </li>
+    <button class="btn-confirm" onclick="document.getElementById('playlistwidget').close()">閉じる</button></ul>
+    <div class="box"><p>曲を一時停止するには、曲名をクリックしてください。別の曲に切り替えるには、再生したい曲のタイトルをクリックしてください。</p></div>
+</dialog>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const player = document.getElementById("audio-player");
+        const trackTitle = document.getElementById("current-track-title");
+        const tracks = document.querySelectorAll(".playlist-track");
+
+        function handleTrackClick(trackElement) {
+            const fileUrl = trackElement.getAttribute("data-src");
+            const songName = trackElement.textContent.replace(/^\s*\d+\.\s*/, '').trim(); 
+            
+           
+            if (trackElement.classList.contains("playing")) {
+                player.pause();
+                trackElement.classList.remove("playing");
+                trackElement.classList.add("paused");
+                trackTitle.textContent = "[PAUSED] " + songName;
+                return;
+            } 
+            
+            if (trackElement.classList.contains("paused")) {
+                player.play();
+                trackElement.classList.remove("paused");
+                trackElement.classList.add("playing");
+                trackTitle.textContent = songName;
+                return;
+            }
+
+            tracks.forEach(t => {
+                t.classList.remove("playing");
+                t.classList.remove("paused");
+            });
+            
+            trackElement.classList.add("playing");
+            player.src = fileUrl; 
+            trackTitle.textContent = songName;
+            
+            player.load();
+            player.play().catch(error => {
+                console.log("Playback interaction error caught.");
+            });
+        }
+
+        tracks.forEach(track => {
+            track.addEventListener("click", function() {
+                handleTrackClick(this);
+            });
+        });
+
+        if (tracks.length > 0) {
+            const firstTrack = tracks[0];
+            player.src = firstTrack.getAttribute("data-src");
+            trackTitle.textContent = firstTrack.textContent.replace(/^\s*\d+\.\s*/, '').trim();
+            player.load();
+            
+            player.play().then(() => {
+                firstTrack.classList.add("playing");
+            }).catch(() => {
+                
+                const startAutoplay = () => {
+                    player.play().then(() => {
+                        firstTrack.classList.add("playing");
+                    });
+                    document.removeEventListener("click", startAutoplay);
+                };
+                document.addEventListener("click", startAutoplay);
+            });
+        }
+
+        
+        player.addEventListener("ended", function() {
+            let currentActive = document.querySelector(".playlist-track.playing");
+            let nextActive = currentActive ? currentActive.nextElementSibling : null;
+            
+            if (!nextActive) {
+                nextActive = tracks[0];
+            }
+            
+            if (nextActive) {
+                tracks.forEach(t => {
+                    t.classList.remove("playing");
+                    t.classList.remove("paused");
+                });
+                handleTrackClick(nextActive);
+            }
+        });
+    });
+</script>
+	    <h2>変更履歴のプレビュー</h2>
+            <div class="box">
+                <ul style="padding-left:10px;">
+                    <li>めっちゃかわいいレイアウトにしたよ - おさな</li>
+                    <li>CSSをたくさん作り直したよ - おさな</li>
+                    <li>ウェブサイトを翻訳したよ - サナとおさな</li>
+                </ul>
+            </div>
+            </aside><aside id="leftSidebar" style="margin-right: 0px;"><h2>Updates</h2>
+            <div class="box">
+                <p>I have recently updated this tool as of August 2022!</p>
+                <ul style="padding-left:10px;">
+                    <li>Rewrote the JS to generate cleaner code</li>
+                    <li>Rewrote the CSS in a way that hopefully makes much more sense to edit</li>
+                    <li>Added a couple of new features!</li>
+                    <li>Old version is still available <a href="old.html" target="_blank">here</a></li>
+                </ul>
+            </div>
+            <h2>Hi there!</h2>
+            <h3>Other Tools</h3>
+            <ul>
+                <li><a href="https://sadgrlonline.github.io/html-cheatsheet/" target="_blank">HTML Cheatsheet</a>
+                </li><li><a href="webmastery/webmaster-links.html" target="_blank">Webmaster Links</a></li>
+                <li><a href="webmastery/downloads/tiledbgs.html" target="_blank">Tiled BGs</a></li>
+                <li><a href="webmastery/downloads/fonts.html" target="_blank">Fonts</a></li>
+                <li><a href="projects/ideas/" target="_blank">Site Ideas</a></li>
+            </ul></aside></div>
+            <footer id="footer">©2026 Hrmnx Entertainment, HOSHIZORA</footer>
+        </div>
+</div>    
+</body>
+</html>

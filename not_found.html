@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- This website was collaborately made by multiple members of HRMNX Ent. -->
+<!-- Some of the site coding lines are taken from other website creators, aka knoxstation.neocities.org for some box styling and css and some extras from nukochannel.neocities.org! --><html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="images/japfavicon.png">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.cdnfonts.com/css/nintendo-ds-bios');
+    body {
+      font-family: "DotGothic16", sans-serif;
+      font-size: 1em;
+	    background-image: url('images/bg2.png');
+	    background-repeat: no-repeat;
+      background-size: cover;
+	    background-attachment: fixed;
+      image-rendering: pixelated;
+         }
+  </style>
+  <script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
+  <link href="https://fonts.cdnfonts.com/css/nintendo-ds-bios" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=VT323&display=swap" rel="stylesheet">
+  <title></title>
+  <script>function recursiveAnimateTitle(string, delay) {
+  let firstLetter = string[0];
+  let title = document.querySelector('title');
+  title.innerHTML += firstLetter;
+  if (string.length > 1) {
+    setTimeout(function() {
+      recursiveAnimateTitle(string.substring(1), delay);
+    }, delay);
+  }
+}
+
+function animateTitle(string, initialDelay, restartDelay) {
+  document.querySelector('title').innerHTML = "";
+  recursiveAnimateTitle(string, initialDelay);
+  setTimeout(function() {
+    animateTitle(string, initialDelay, restartDelay);
+  }, initialDelay + string.length * restartDelay);
+}
+
+animateTitle('404システム内に見つかりません', 100, 1000);</script>
+  <meta name="google-site-verification" content="DIYodx7-82JFIxuSEbH-U1hzahjbt0YO149rKgjVsKM" />
+  <link rel="alternate" type="application/rss+xml" href="{RSS}">
+  <link rel="stylesheet" href="https://static.tumblr.com/qxrkgx6/RWPmgn2qa/normalize.min.css">
+  <script src="Scripts/ghostCursor.js"></script>
+
+
+</head>
+
+  <body>
+    <img src="images/notfound.png" class="pop-in-auto" alt="" style="image-rendering: pixelated; width: 70%; margin: auto;">
+    <audio id="click-sound" aria-hidden="true" src="https://files.catbox.moe/maiz89.wav" autoplay></audio>
+  </body>
+</html>

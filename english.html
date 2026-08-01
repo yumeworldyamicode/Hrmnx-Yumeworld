@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!-- This website was collaborately made by multiple members of HRMNX Ent. -->
+<!-- Some of the site coding lines are taken from other website creators, aka knoxstation.neocities.org for some box styling and css and some extras from nukochannel.neocities.org! --><html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="images/engfavicon.png">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.cdnfonts.com/css/nintendo-ds-bios');
+    body {
+      font-family: "DotGothic16", sans-serif;
+      font-size: 1em;
+	    background-image: url('images/bg2.png');
+	    background-repeat: no-repeat;
+      background-size: cover;
+	    background-attachment: fixed;
+      image-rendering: pixelated;
+         }
+  </style>
+  <script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
+  <link href="https://fonts.cdnfonts.com/css/nintendo-ds-bios" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=VT323&display=swap" rel="stylesheet">
+  <title></title>
+  <script>function recursiveAnimateTitle(string, delay) {
+  let firstLetter = string[0];
+  let title = document.querySelector('title');
+  title.innerHTML += firstLetter;
+  if (string.length > 1) {
+    setTimeout(function() {
+      recursiveAnimateTitle(string.substring(1), delay);
+    }, delay);
+  }
+}
+
+function animateTitle(string, initialDelay, restartDelay) {
+  document.querySelector('title').innerHTML = "";
+  recursiveAnimateTitle(string, initialDelay);
+  setTimeout(function() {
+    animateTitle(string, initialDelay, restartDelay);
+  }, initialDelay + string.length * restartDelay);
+}
+
+animateTitle('Welcome to my Yumeworld!', 100, 1000);</script>
+  <meta name="google-site-verification" content="DIYodx7-82JFIxuSEbH-U1hzahjbt0YO149rKgjVsKM" />
+  <link rel="alternate" type="application/rss+xml" href="{RSS}">
+  <link rel="stylesheet" href="https://static.tumblr.com/qxrkgx6/RWPmgn2qa/normalize.min.css">
+  <script src="Scripts/ghostCursor.js"></script>
+
+
+</head>
+
+<body onload="new ghostCursor();">
+<div class="layout">
+  <h1 class="visually-hidden">Welcome to my Yumeworld!</h1>
+  <header class="box header" id="box-header">
+    <img src="images/logo_en.png" class="pop-in-hover" onclick="showLanguagePrompt()" style="cursor: pointer; image-rendering: pixelated; width: 60%;">
+  
+    <!-- uwu -Osana-->
+    <div id="languageModal" class="modal-overlay">
+     <div class="modal-box">
+        <p>진짜 사이트 언어를 한국어로 바꿀게?<br>Are you sure you want to switch the site language to Korean?</p>
+         <div class="modal-buttons">
+         <button class="btn-confirm" onclick="redirectToKorean()">언어 변경</button>
+         <button class="btn-cancel" onclick="closeLanguagePrompt()">취소</button>
+       </div>
+     </div>
+    </div>
+  
+       <script>
+       function showLanguagePrompt() {
+          document.getElementById('languageModal').classList.add('show-modal');
+        }
+  
+       function closeLanguagePrompt() {
+         document.getElementById('languageModal').classList.remove('show-modal');
+        }
+
+       function redirectToKorean() {
+         window.location.href = "korean.html";
+        }
+       </script>
+  </header>
+   <!-- no one: marquee: sybau - sana -->
+   <!-- Translation by me!! -Osana -->
+   <!-- bye the way nobody gaf im dead - sana -->
+  <div class="box subheader" id="box-subheader">
+        <marquee behavior="scroll" direction="left" style="color:rgb(3, 48, 252); text-shadow: 0 0 6px #ffffff, 0 0 10px #ffffff; font-family: DotGothic16, sans-serif;">
+     <img src="images/wings1.gif" alt=""><img src="images/wings2.gif" alt="">   Hey! Welcome to my Yumeworld! How are you doing? ♪(^∇^*)<img src="images/wings1.gif" alt=""><img src="images/wings2.gif" alt="">
+        </marquee>
+  </div>
+  <div class="box" id="box-topnav">
+    <nav class="top-nav">
+  
+      <div class="top-nav-item">
+        <a href="https://yaminoyume.atabook.org" target="_blank" class="top-nav-link">Guestbook</a>
+      </div>
+  
+      <div class="top-nav-item">
+        <a href="changelog-en.html" target="_blank" class="top-nav-link">Changelog</a>
+      </div>
+  
+      <div class="top-nav-item">
+        <a href="about-en.html" target="_blank" class="top-nav-link">Who Are We?</a>
+      </div>
+  
+    </nav>
+  </div>
+</div>    
+</body>
+</html>
